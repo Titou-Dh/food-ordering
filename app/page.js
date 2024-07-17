@@ -102,19 +102,7 @@ export default function Component() {
             <MenuIcon className="w-8 h-8" />
             <h1 className="text-2xl font-bold">Restaurant</h1>
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <MenuIcon className="w-6 h-6" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end">
-              <DropdownMenuItem>Home</DropdownMenuItem>
-              <DropdownMenuItem>Menu</DropdownMenuItem>
-              <DropdownMenuItem>About</DropdownMenuItem>
-              <DropdownMenuItem>Contact</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+
         </div>
       </header>
       <div className="flex-1 grid grid-cols-[3fr_1fr] gap-6 p-6">
