@@ -104,6 +104,7 @@ export default function Component() {
         onClose: () => setCart([]),
       })
     }
+    setCart([])
   }
 
   const handleAddToCart = (item) => {
