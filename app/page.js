@@ -88,12 +88,22 @@ export default function Component() {
 
 
   const handleCheckout = () => {
-    Swal.fire({
-      title: "Success",
-      text: "Your order has been placed",
-      icon: "success"
-    });
-    setCart([])
+    if (cart.length === 0) {
+      Swal.fire({
+        icon: "error",
+        title: "Your cart is empty",
+        text: "Please add items to your order",
+      })
+    }
+    else {
+      Swal.fire({
+        icon: "success",
+        title: "Order Placed",
+        text: `Your order total is $${total.toFixed(2)}`,
+        confirmButtonText: "OK",
+        onClose: () => setCart([]),
+      })
+    }
   }
 
   const handleAddToCart = (item) => {
