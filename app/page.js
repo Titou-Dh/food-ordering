@@ -128,7 +128,7 @@ export default function Component() {
 
         </div>
       </header>
-      <div className="flex-1 grid grid-cols-[3fr_1fr] gap-6 p-6">
+      <div className="flex-1 grid grid-cols-1 md:grid-cols-[3fr_1fr] gap-6 p-6">
         <div className="overflow-auto">
           {categories.map((category) => (
             <div key={category.name} className="mb-8">
