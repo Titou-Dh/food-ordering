@@ -10,6 +10,7 @@ import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuIte
 import { Button } from "@/components/ui/button"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
+import Swal from "sweetalert2"
 
 export default function Component() {
   const [cart, setCart] = useState([])
@@ -84,6 +85,17 @@ export default function Component() {
       ],
     },
   ])
+
+
+  const handleCheckout = () => {
+    Swal.fire({
+      title: "Success",
+      text: "Your order has been placed",
+      icon: "success"
+    });
+    setCart([])
+  }
+
   const handleAddToCart = (item) => {
     setCart([...cart, item])
   }
@@ -169,7 +181,7 @@ export default function Component() {
             <div className="font-medium">Total:</div>
             <div className="text-2xl font-bold">${total.toFixed(2)}</div>
           </div>
-          <Button className="w-full mt-4">Place Order</Button>
+          <Button className="w-full mt-4" onClick={handleCheckout}>Place Order</Button>
         </div>
       </div>
     </div>
